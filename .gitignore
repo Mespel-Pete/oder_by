@@ -1,0 +1,6 @@
+function custom_job_manager_listing_categories_dropdown_args( $args ) {
+	$args[ 'orderby' ] = 'FIELD(f.facet_value, "bis-40-qm", "41-bis-60-qm", "61-bis-80-qm", "81-bis-120-qm", "120-und-mehr")';
+	
+	return $args;
+}
+add_filter( 'job_manager_listing_categories_dropdown_args', 'custom_job_manager_listing-categories_dropdown_args');
